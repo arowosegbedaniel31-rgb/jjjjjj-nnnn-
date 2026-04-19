@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    background:
+        linear-gradient(180deg, #7fd3ff 0%, #9de7ff 36%, #fff3b8 36%, #fff8dc 100%);
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    color: #17324d;
+}
+
+.page {
+    position: relative;
+    width: min(1280px, calc(100% - 28px));
+    margin: 0 auto;
+    padding: 26px 0 60px;
+}
+
+.sky {
+    position: absolute;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.65);
+    z-index: 0;
+}
+
+.sky-one {
+    top: 58px;
+    left: 3%;
+    width: 150px;
+    height: 52px;
+}
+
+.sky-two {
+    top: 120px;
+    right: 10%;
+    width: 180px;
+    height: 60px;
+}
+
+.sky-three {
+    top: 220px;
+    left: 22%;
+    width: 120px;
+    height: 42px;
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) 220px;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hero-panel {
+    position: relative;
+    padding: 34px 34px 38px;
+    border: 5px solid #17324d;
+    border-radius: 34px;
+    background: #ff7f50;
+    box-shadow: 12px 12px 0 #17324d;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 3px solid #17324d;
+    border-radius: 999px;
+    background: #fff8dc;
+    color: #17324d;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+.hero-title {
+    margin-top: 18px;
+    font-size: clamp(34px, 5vw, 68px);
+    line-height: 0.95;
+    font-weight: 900;
+    color: #fff8dc;
+    text-shadow: 3px 3px 0 #17324d;
+}
+
+.hero-text {
+    max-width: 760px;
+    margin-top: 18px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #fffaf0;
+    font-weight: 700;
+}
+
+.hero-stars {
+    position: relative;
+    height: 220px;
+}
+
+.star {
+    position: absolute;
+    background: #ffe45c;
+    border: 4px solid #17324d;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 92%, 50% 70%, 21% 92%, 32% 57%, 2% 35%, 39% 35%);
+    box-shadow: 8px 8px 0 rgba(23, 50, 77, 0.2);
+}
+
+.star-one {
+    top: 8px;
+    left: 18px;
+    width: 88px;
+    height: 88px;
+}
+
+.star-two {
+    top: 92px;
+    left: 92px;
+    width: 118px;
+    height: 118px;
+    background: #ffda79;
+}
+
+.star-three {
+    top: 40px;
+    left: 120px;
+    width: 56px;
+    height: 56px;
+    background: #fff4a3;
+}
+
+.meme-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.meme-card {
+    overflow: hidden;
+    border: 4px solid #17324d;
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow: 10px 10px 0 #17324d;
+    transition: transform 0.18s ease;
+}
+
+.meme-card:nth-child(4n + 1) {
+    background: #fff0f4;
+}
+
+.meme-card:nth-child(4n + 2) {
+    background: #eefcff;
+}
+
+.meme-card:nth-child(4n + 3) {
+    background: #fff9df;
+}
+
+.meme-card:nth-child(4n + 4) {
+    background: #f2f8e8;
+}
+
+.meme-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.meme-image {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-bottom: 4px solid #17324d;
+}
+
+.meme-content {
+    padding: 18px 18px 22px;
+}
+
+.meme-title {
+    font-size: 24px;
+    line-height: 1.05;
+    font-weight: 900;
+    color: #17324d;
+}
+
+.meme-quote {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #31506f;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stars {
+        height: 120px;
+        width: 220px;
+    }
+}
+
+@media (max-width: 640px) {
+    .page {
+        width: min(100% - 16px, 1280px);
+        padding-top: 18px;
+    }
+
+    .hero-panel {
+        padding: 24px 22px 28px;
+        border-radius: 26px;
+        box-shadow: 8px 8px 0 #17324d;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .meme-grid {
+        gap: 18px;
+    }
+
+    .meme-card {
+        box-shadow: 7px 7px 0 #17324d;
+    }
+
+    .meme-image {
+        height: 210px;
+    }
+}
